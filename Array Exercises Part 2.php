@@ -53,18 +53,19 @@ for( $i = 0; $i < count($n ); $i++){
 
     <?php 
     print "<h4> PHP script to separate odd and even integers in separate arrays </h4>";
-    $text = file("file.txt");
+
+    $text = file("file.txt"); 
 
     echo "<b>The Odd Elements are:</b>" . "<br>";
     for($i = 0; $i < count($text); $i++){
-        if($text [$i] %2!=0){
+        if(intval($text[$i]) %2!=0){
             print "$text[$i]";
         }
     }
 
     echo "<br>"."<b>The Even Elements are:</b>" . "<br>";
         for($i = 0; $i < count($text); $i++){
-            if($text[$i]%2==0){
+            if(intval($text[$i])%2==0){
                 print "$text[$i]";
             }
         }
